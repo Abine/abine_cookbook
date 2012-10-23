@@ -9,6 +9,7 @@ depends "rightscale"
 depends "web_apache"
 
 recipe "abine::install_all_creds", "Install a TAR of all the credentials"
+recipe "abine::install_newrelic_sysmond", "Installs the New Relic System Monitoring Daemon"
 
 attribute "abine/credentials/s3_file",
   :display_name => "Abine Credential Remote File Name",
