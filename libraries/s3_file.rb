@@ -1,4 +1,4 @@
-﻿# coding: utf-8
+# coding: utf-8
 #
 # Author:: Christopher Peplin (<peplin@bueda.com>)
 # Author:: Ivan Porto Carrero (<ivan@mojolly.com>)
