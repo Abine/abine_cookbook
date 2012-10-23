@@ -27,7 +27,7 @@ s3_file "#{node[:abine][:credentials][:credential_location]}/download.tar.gz" do
 	secret_access_key node[:abine][:credentials][:aws_secret_key]
 	owner "root"
 	group "root"
-	mode '0644'
+	mode '0655'
 end
 
 #untar it
