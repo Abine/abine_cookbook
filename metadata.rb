@@ -31,7 +31,7 @@ attribute "abine/credentials/aws_secret_key",
 attribute "abine/credentials/credential_location",
   :display_name => "Local Path for Credential Files",
   :description => "Local Directory where credential files should live. Leave out trailing slash",
-  :required => "required",
+  :required => "recommended",
   :default => "/etc/php5/creds",
   :recipes => ["abine::install_all_creds"]
 
