@@ -13,3 +13,4 @@ default[:abine][:credentials][:aws_secret_key] = ""
 default[:abine][:credentials][:credential_location] = "/etc/apache2/php5/creds"
 default[:abine][:credentials][:s3_bucket] = ""
 default[:abine][:credentials][:enable] = 'false'
+
