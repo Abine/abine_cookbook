@@ -92,8 +92,7 @@
   "groupings": {
   },
   "recipes": {
-    "abine::install_all_creds": "Install a TAR of all the credentials",
-    "abine::install_newrelic_sysmond": "Installs the New Relic System Monitoring Daemon"
+    "abine::install_all_creds": "Install a TAR of all the credentials"
   },
   "version": "0.0.1"
 }
