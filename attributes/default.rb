@@ -12,6 +12,4 @@ default[:abine][:credentials][:aws_access_key] = ""
 default[:abine][:credentials][:aws_secret_key] = ""
 default[:abine][:credentials][:credential_location] = "/etc/apache2/php5/creds"
 default[:abine][:credentials][:s3_bucket] = ""
-
-# Attributes related to New Relic
-default[:newrelic][:license_key] = "d396101559ace258ca4f1ebd842329c22bc9d677"
+default[:abine][:credentials][:enable] = 'false'
