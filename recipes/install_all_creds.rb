@@ -8,33 +8,8 @@
 #
 rightscale_marker :begin
 
-log "Clearing old credentials and downloading new ones..."
-directory node[:abine][:credentials][:credential_location] do
-	action :delete
-	recursive true
+abine_creds 'install creds' do
+  action :deploy
 end
-
-directory node[:abine][:credentials][:credential_location] do
-	action :create
-	recursive true
-	mode "0644"
-end
-
-#fetch the s3 file
-s3_file "#{node[:abine][:credentials][:credential_location]}/download.tar.gz" do
-	source "s3://#{node[:abine][:credentials][:s3_bucket]}/#{node[:abine][:credentials][:s3_file]}"
-	access_key_id node[:abine][:credentials][:aws_access_key]
-	secret_access_key node[:abine][:credentials][:aws_secret_key]
-	owner "root"
-	group "root"
-	mode '0655'
-end
-
-#untar it
-execute "tar -xf download.tar.gz" do
-	cwd node[:abine][:credentials][:credential_location]
-end
-
-log "Done"
 
 rightscale_marker :end

@@ -28,7 +28,7 @@ attribute "abine/credentials/aws_secret_key",
 attribute "abine/credentials/credential_location",
   :display_name => "Local Path for Credential Files",
   :description => "Local Directory where credential files should live. Leave out trailing slash",
-  :required => "recommended",
+  :required => "optional",
   :default => "/etc/php5/creds",
   :recipes => ["abine::install_all_creds"]
 
@@ -37,3 +37,10 @@ attribute "abine/credentials/s3_bucket",
   :description => "Name of S3 bucket where the credentials are stored.",
   :required => "required",
   :recipes => ["abine::install_all_creds"]
+  
+attribute "abine/credentials/enable",
+  :display_name => "Deploy credentials from S^3",
+  :description => "Retrieves database credentials from an S^3 bucket into a specified path.",
+  :required => "recommended",
+  :choice => ["true", "false"],
+  :default => "false"
