@@ -10,19 +10,19 @@ recipe "abine::install_all_creds", "Install a TAR of all the credentials"
 attribute "abine/credentials/s3_file",
   :display_name => "Abine Credential Remote File Name",
   :description => "The name of the credential file as it exists in an Amazon S3 bucket.",
-  :required => "required",
+  :required => "recommended",
   :recipes => ["abine::install_all_creds"]
 
 attribute "abine/credentials/aws_access_key",
   :display_name => "Amazon Access Key that can read this file",
   :description => "AWS credentials that have read access to the file that you specified.",
-  :required => "required",
+  :required => "recommended",
   :recipes => ["abine::install_all_creds"]
 
 attribute "abine/credentials/aws_secret_key",
   :display_name => "Amazon Secret Access Key that can read this file",
   :description => "AWS credentials that have read access to the file that you specified.",
-  :required => "required",
+  :required => "recommended",
   :recipes => ["abine::install_all_creds"]
 
 attribute "abine/credentials/credential_location",
@@ -35,9 +35,9 @@ attribute "abine/credentials/credential_location",
 attribute "abine/credentials/s3_bucket",
   :display_name => "Amazon S3 bucket",
   :description => "Name of S3 bucket where the credentials are stored.",
-  :required => "required",
+  :required => "recommended",
   :recipes => ["abine::install_all_creds"]
-  
+
 attribute "abine/credentials/enable",
   :display_name => "Deploy credentials from S^3",
   :description => "Retrieves database credentials from an S^3 bucket into a specified path.",
