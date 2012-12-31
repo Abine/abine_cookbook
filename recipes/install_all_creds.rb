@@ -10,6 +10,7 @@ rightscale_marker :begin
 
 abine_creds 'install creds' do
   action :deploy
+  only_if {node[:abine][:credentials][:enable] == 'true'}
 end
 
 rightscale_marker :end
