@@ -14,3 +14,7 @@ default[:abine][:credentials][:credential_location] = "/etc/apache2/php5/creds"
 default[:abine][:credentials][:s3_bucket] = ""
 default[:abine][:credentials][:enable] = 'false'
 
+default[:abine][:ssh_keys][:s3_bucket] = "abine-ssh-keys"
+default[:abine][:ssh_keys][:aws_access_key] = ""
+default[:abine][:ssh_keys][:aws_secret_key] = ""
+default[:abine][:ssh_keys][:s3_file] = ""
