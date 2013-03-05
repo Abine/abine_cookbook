@@ -8,7 +8,7 @@
 #
 rightscale_marker :begin
 
-if node[:abine][:ssh_keys][:s3_file]
+unless node[:abine][:ssh_keys][:s3_file].empty?
   file "/root/.ssh/deployed_keys" do
     action :delete
   end
